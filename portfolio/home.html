@@ -527,6 +527,16 @@
                             arrows: true  // 矢印を表示
                         }).mount();
                     });
+                    // DOMの要素がロードされた後にSplideを初期化
+                    document.addEventListener('DOMContentLoaded', function () {
+                        new Splide('#image-carousel-robots', {
+                            type: 'loop', // 無限スライド
+                            perPage: 1,   // 一度に表示するスライド数
+                            perMove: 1,   // スクロールするスライド数
+                            pagination: true, // ドットナビゲーションを表示
+                            arrows: true  // 矢印を表示
+                        }).mount();
+                    });
                     </script>
 
                     
